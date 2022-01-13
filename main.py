@@ -4,6 +4,7 @@ import pickle
 import pandas as pd
 
 app = Flask(__name__)
+d=pd.read_csv('IndiGo_Data.csv')
 model = pickle.load(open("regressor.pkl", "rb"))
 
 @app.route("/")
